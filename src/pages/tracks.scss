@@ -1,0 +1,24 @@
+.tracks {
+    color: white;
+    .track {
+        * {
+            margin-right: 7px;
+        }
+        display: grid;
+        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+        padding: 7px;
+        border-top: solid 1px black;
+        .name {
+            font-weight: 600;
+        }
+        .id {
+            color: #ccc;
+        }
+        &.headers {
+            background: #001011;
+            font-size: smaller;
+            position: sticky;
+            top: -1px;
+        }
+    }
+}

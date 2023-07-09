@@ -4,10 +4,33 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import SearchPage from './pages/search';
+
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import TracksPage from './pages/tracks';
+
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App/>,
+    },
+    {
+        path: "/search",
+        element: <SearchPage/>,
+    },
+    {
+        path: "/tracks",
+        element: <TracksPage/>,
+    },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
